@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Livewire\Estadisticas;
+use App\Http\Livewire\Clientes\Clientes;
+use App\Http\Livewire\Prestamos\Prestamos;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,12 +15,17 @@ use App\Http\Livewire\Estadisticas;
 |
 */
 Route::get('estadisticas', Estadisticas::class)->name('estadisticas');
-Route::get('/', function () {
-    return view('layouts.theme');
-});
+Route::get('clientes', Clientes::class)->name('clientes');
+Route::get('prestamos', Prestamos::class)->name('prestamos');
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
+Route::get('/', Estadisticas::class)->middleware(['auth'])->name('app');
+
+// Route::get('/dashboard', function () {
+//     return view('dashboard');
+// })->middleware(['auth'])->name('dashboard');
 
 require __DIR__.'/auth.php';
+
+Auth::routes();
+
+// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

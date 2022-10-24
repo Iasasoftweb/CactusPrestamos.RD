@@ -4,44 +4,44 @@
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
-    <meta name="description" content="Modern admin is super flexible, powerful, clean &amp; modern responsive bootstrap 4 admin template with unlimited possibilities with bitcoin dashboard.">
-    <meta name="keywords" content="admin template, modern admin template, dashboard template, flat admin template, responsive admin template, web app, crypto dashboard, bitcoin dashboard">
-    <meta name="author" content="PIXINVENT">
-    <title>Cactus RD - Sistema Administración de Préstamos</title>
-    <link rel="apple-touch-icon" href="{{ asset('/app-assets/images/ico/apple-icon-120.png')}}"> 
-    <link rel="shortcut icon" type="image/x-icon" href="../../../app-assets/images/ico/favicon.ico">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i%7CQuicksand:300,400,500,700" rel="stylesheet">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+<meta name="description" content="Modern admin is super flexible, powerful, clean &amp; modern responsive bootstrap 4 admin template with unlimited possibilities with bitcoin dashboard.">
+<meta name="keywords" content="admin template, modern admin template, dashboard template, flat admin template, responsive admin template, web app, crypto dashboard, bitcoin dashboard">
+<meta name="author" content="PIXINVENT">
+<title>{{ config('app.name', 'Laravel') }}</title>
+<link rel="apple-touch-icon" href="{{ asset('/app-assets/images/ico/apple-icon-120.png')}}"> 
+<link rel="shortcut icon" type="image/x-icon" href="../../../app-assets/images/ico/favicon.ico">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i%7CQuicksand:300,400,500,700" rel="stylesheet">
 
-    <!-- BEGIN: Vendor CSS-->
-    <link rel="stylesheet" type="text/css" href="{{ asset('/app-assets/vendors/css/vendors.min.css')}}">  
-    <link rel="stylesheet" type="text/css" href="{{ asset('/app-assets/vendors/css/weather-icons/climacons.min.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('/app-assets/fonts/meteocons/style.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('/app-assets/vendors/css/charts/morris.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('/app-assets/vendors/css/charts/chartist.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('/app-assets/vendors/css/charts/chartist-plugin-tooltip.css')}}">
-    <!-- END: Vendor CSS-->
+<!-- BEGIN: Vendor CSS-->
+<link rel="stylesheet" type="text/css" href="{{ asset('/app-assets/vendors/css/vendors.min.css')}}">  
+<link rel="stylesheet" type="text/css" href="{{ asset('/app-assets/vendors/css/weather-icons/climacons.min.css')}}">
+<link rel="stylesheet" type="text/css" href="{{ asset('/app-assets/fonts/meteocons/style.css')}}">
+<link rel="stylesheet" type="text/css" href="{{ asset('/app-assets/vendors/css/charts/morris.css')}}">
+<link rel="stylesheet" type="text/css" href="{{ asset('/app-assets/vendors/css/charts/chartist.css')}}">
+<link rel="stylesheet" type="text/css" href="{{ asset('/app-assets/vendors/css/charts/chartist-plugin-tooltip.css')}}">
+<!-- END: Vendor CSS-->
 
-    <!-- BEGIN: Theme CSS-->
-    <link rel="stylesheet" type="text/css" href="{{ asset('/app-assets/css/bootstrap.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('/app-assets/css/bootstrap-extended.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('/app-assets/css/colors.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('/app-assets/css/components.css')}}">
-    <!-- END: Theme CSS-->
+<!-- BEGIN: Theme CSS-->
+<link rel="stylesheet" type="text/css" href="{{ asset('/app-assets/css/bootstrap.css')}}">
+<link rel="stylesheet" type="text/css" href="{{ asset('/app-assets/css/bootstrap-extended.css')}}">
+<link rel="stylesheet" type="text/css" href="{{ asset('/app-assets/css/colors.css')}}">
+<link rel="stylesheet" type="text/css" href="{{ asset('/app-assets/css/components.css')}}">
+<!-- END: Theme CSS-->
 
-    <!-- BEGIN: Page CSS-->
-    <link rel="stylesheet" type="text/css" href="{{ asset('/app-assets/css/core/menu/menu-types/vertical-menu-modern.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('/app-assets/css/core/colors/palette-gradient.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('/app-assets/fonts/simple-line-icons/style.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('/app-assets/css/core/colors/palette-gradient.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('/app-assets/css/pages/timeline.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('/app-assets/css/pages/dashboard-ecommerce.css')}}">
-    <!-- END: Page CSS-->
+<!-- BEGIN: Page CSS-->
+<link rel="stylesheet" type="text/css" href="{{ asset('/app-assets/css/core/menu/menu-types/vertical-menu-modern.css')}}">
+<link rel="stylesheet" type="text/css" href="{{ asset('/app-assets/css/core/colors/palette-gradient.css')}}">
+<link rel="stylesheet" type="text/css" href="{{ asset('/app-assets/fonts/simple-line-icons/style.css')}}">
+<link rel="stylesheet" type="text/css" href="{{ asset('/app-assets/css/core/colors/palette-gradient.css')}}">
+<link rel="stylesheet" type="text/css" href="{{ asset('/app-assets/css/pages/timeline.css')}}">
+<link rel="stylesheet" type="text/css" href="{{ asset('/app-assets/css/pages/dashboard-ecommerce.css')}}">
+<!-- END: Page CSS-->
 
-    <!-- BEGIN: Custom CSS-->
-    <link rel="stylesheet" type="text/css" href="{{ asset('/assets/css/style.css')}}">
-    <!-- END: Custom CSS-->
+<!-- BEGIN: Custom CSS-->
+<link rel="stylesheet" type="text/css" href="{{ asset('/assets/css/style.css')}}">
+<!-- END: Custom CSS-->
     @livewireStyles
 </head>
 <!-- END: Head-->
@@ -62,13 +62,15 @@
                     <li class="nav-item d-none d-lg-block nav-toggle"><a class="nav-link modern-nav-toggle pr-0" data-toggle="collapse"><i class="toggle-icon ft-toggle-right font-medium-3 white" data-ticon="ft-toggle-right"></i></a></li>
                     <li class="nav-item d-lg-none"><a class="nav-link open-navbar-container" data-toggle="collapse" data-target="#navbar-mobile"><i class="la la-ellipsis-v"></i></a></li>
                 </ul>
+
+                
             </div>
             <div class="navbar-container content">
                 <div class="collapse navbar-collapse" id="navbar-mobile">
                     <ul class="nav navbar-nav mr-auto float-left">
                         <li class="nav-item d-none d-lg-block"><a class="nav-link nav-link-expand" href="#"><i class="ficon ft-maximize"></i></a></li>
                         <li class="dropdown nav-item mega-dropdown d-none d-lg-block"><a class="dropdown-toggle nav-link" href="#" data-toggle="dropdown">Buscar</a>
-                            <ul class="mega-dropdown-menu dropdown-menu row p-1">
+                            {{-- <ul class="mega-dropdown-menu dropdown-menu row p-1">
                                 <li class="col-md-4 bg-mega p-2">
                                     <h3 class="text-white mb-1 font-weight-bold">Mega Menu Sidebar</h3>
                                     <p class="text-white line-height-2">Candy canes bonbon toffee. Cheesecake dragée gummi bears chupa chups powder bonbon. Apple pie cookie sweet.</p>
@@ -118,7 +120,7 @@
                                         </li>
                                     </ul>
                                 </li>
-                            </ul>
+                            </ul> --}}
                         </li>
                         <li class="nav-item nav-search"><a class="nav-link nav-link-search" href="#"><i class="ficon ft-search"></i></a>
                             <div class="search-input">
@@ -128,13 +130,62 @@
                             </div>
                         </li>
                     </ul>
+{{-- 
+                    <ul class="navbar-nav ms-auto">
+                        <!-- Authentication Links -->
+                        @guest
+                            @if (Route::has('login'))
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                </li>
+                            @endif
+
+                            @if (Route::has('register'))
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                </li>
+                            @endif
+                        @else
+                            <li class="nav-item dropdown">
+                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                    {{ Auth::user()->name }}
+                                </a>
+
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                        {{ __('Logout') }}
+                                    </a>
+
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                        @csrf
+                                    </form>
+                                </div>
+                            </li>
+                        @endguest
+                    </ul> --}}
                     <ul class="nav navbar-nav float-right">
                       
                        
                        
-                        <li class="dropdown dropdown-user nav-item"><a class="dropdown-toggle nav-link dropdown-user-link" href="#" data-toggle="dropdown"><span class="mr-1 user-name text-bold-700">Nombre de Usuario</span><span class="avatar avatar-online"><img src="../../../app-assets/images/portrait/small/avatar-s-19.png" alt="avatar"><i></i></span></a>
+                        <li class="dropdown dropdown-user nav-item"><a class="dropdown-toggle nav-link dropdown-user-link" href="#" data-toggle="dropdown">
+                            
+                            <span class="mr-1 user-name text-bold-700"> {{ Auth::user()->name }}</span><span class="avatar avatar-online">
+                                <img src="../../../app-assets/images/portrait/small/avatar-s-19.png" alt="avatar"><i></i></span></a>
                             <div class="dropdown-menu dropdown-menu-right"><a class="dropdown-item" href="#"><i class="ft-user"></i> Edit Profile</a><a class="dropdown-item" href="#"><i class="ft-clipboard"></i> Todo</a><a class="dropdown-item" href="#"><i class="ft-check-square"></i> Task</a>
-                                <div class="dropdown-divider"></div><a class="dropdown-item" href="login-with-bg-image.html"><i class="ft-power"></i> Logout</a>
+                                
+                                <div class="dropdown-divider"></div>
+
+                                <a class="dropdown-item" href="{{ route('logout') }}"
+                                onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                       <i class="ft-power"></i> Logout</a>
+
+                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                            @csrf
+                                        </form>
+                                        
                             </div>
                         </li>
                     </ul>
@@ -150,31 +201,34 @@
     <div class="main-menu menu-fixed menu-dark menu-accordion menu-shadow" data-scroll-to-active="true">
         <div class="main-menu-content">
             <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation">
-                <li class="active"><a href="index.html"><i class="la la-home"></i><span class="menu-title" data-i18n="eCommerce Dashboard">eCommerce Dashboard</span></a>
+                {{-- <li class="active"><a href="index.html"><i class="la la-home"></i><span class="menu-title" data-i18n="eCommerce Dashboard">eCommerce Dashboard</span></a>
+                </li> --}}
+                <li class=" navigation-header"><span data-i18n="Ecommerce">Actividades</span><i class="la la-ellipsis-h" data-toggle="tooltip" data-placement="right" data-original-title="Ecommerce"></i>
                 </li>
-                <li class=" navigation-header"><span data-i18n="Ecommerce">Ecommerce</span><i class="la la-ellipsis-h" data-toggle="tooltip" data-placement="right" data-original-title="Ecommerce"></i>
+                <li class=" nav-item"><a href="{{route('prestamos')}}"><i class="la la-th-large"></i><span class="menu-title" data-i18n="Shop">Préstamos</span></a>
                 </li>
-                <li class=" nav-item"><a href="{{route('estadisticas')}}"><i class="la la-th-large"></i><span class="menu-title" data-i18n="Shop">Shop</span></a>
+                <li class=" nav-item"><a href="{{route('clientes')}}"><i class="la la-list"></i><span class="menu-title" data-i18n="Product Detail">Clientes</span></a>
                 </li>
-                <li class=" nav-item"><a href="ecommerce-product-detail.html"><i class="la la-list"></i><span class="menu-title" data-i18n="Product Detail">Product Detail</span></a>
+                <li class=" nav-item"><a href="ecommerce-shopping-cart.html"><i class="la la-shopping-cart"></i><span class="menu-title" data-i18n="Shopping Cart">Pagos</span></a>
                 </li>
-                <li class=" nav-item"><a href="ecommerce-shopping-cart.html"><i class="la la-shopping-cart"></i><span class="menu-title" data-i18n="Shopping Cart">Shopping Cart</span></a>
+                <li class=" nav-item"><a href="ecommerce-checkout.html"><i class="la la-credit-card"></i><span class="menu-title" data-i18n="Checkout">Proyección de Cobros</span></a>
                 </li>
-                <li class=" nav-item"><a href="ecommerce-checkout.html"><i class="la la-credit-card"></i><span class="menu-title" data-i18n="Checkout">Checkout</span></a>
+                <li class=" nav-item"><a href="ecommerce-order.html"><i class="la la-check-circle-o"></i><span class="menu-title" data-i18n="Order">Cuadre</span></a>
                 </li>
-                <li class=" nav-item"><a href="ecommerce-order.html"><i class="la la-check-circle-o"></i><span class="menu-title" data-i18n="Order">Order</span></a>
-                </li>
-                <li class=" nav-item"><a href="#"><i class="la la-clipboard"></i><span class="menu-title" data-i18n="Invoice">Invoice</span></a>
+                <li class=" nav-item"><a href="#"><i class="la la-clipboard"></i><span class="menu-title" data-i18n="Invoice">Mentenimiento</span></a>
                     <ul class="menu-content">
-                        <li><a class="menu-item" href="invoice-summary.html"><i></i><span data-i18n="Invoice Summary">Invoice Summary</span></a>
+                        <li><a class="menu-item" href="invoice-summary.html"><i></i><span data-i18n="Invoice Summary">Zonas</span></a>
                         </li>
-                        <li><a class="menu-item" href="invoice-template.html"><i></i><span data-i18n="Invoice Template">Invoice Template</span></a>
+                        <li><a class="menu-item" href="invoice-template.html"><i></i><span data-i18n="Invoice Template">Agentes</span></a>
                         </li>
-                        <li><a class="menu-item" href="invoice-list.html"><i></i><span data-i18n="Invoice List">Invoice List</span></a>
+                        <li><a class="menu-item" href="invoice-list.html"><i></i><span data-i18n="Invoice List">Notario</span></a>
                         </li>
+                        <li><a class="menu-item" href="invoice-list.html"><i></i><span data-i18n="Invoice List">Empleados</span></a>
+                        </li>
+                        
                     </ul>
                 </li>
-                <li class=" navigation-header"><span data-i18n="User Interface">User Interface</span><i class="la la-ellipsis-h" data-toggle="tooltip" data-placement="right" data-original-title="User Interface"></i>
+                <li class=" navigation-header"><span data-i18n="User Interface">Herramientas</span><i class="la la-ellipsis-h" data-toggle="tooltip" data-placement="right" data-original-title="User Interface"></i>
                 </li>
                 <li class=" nav-item"><a href="#"><i class="la la-server"></i><span class="menu-title" data-i18n="Components">Components</span></a>
                     <ul class="menu-content">
@@ -297,11 +351,13 @@
             </ul>
         </div>
     </div>
-
+   
     <!-- END: Main Menu-->
     <!-- BEGIN: Content-->
     <div class="app-content content">
+     
         @yield('content')
+
     </div>
     <!-- END: Content-->
 
@@ -331,10 +387,26 @@
     <script src="{{ asset('/app-assets/js/core/app-menu.js')}}"></script>
     <script src="{{ asset('/app-assets/js/core/app.js')}}"></script>
     <!-- END: Theme JS-->
-
+    <script>
+     $(document).ready(function() {
+        App.init();
+     });
+    </script> 
     <!-- BEGIN: Page JS-->
     <script src="{{ asset('/app-assets/js/scripts/pages/dashboard-ecommerce.js')}}"></script>
     <!-- END: Page JS-->
+
+      <script>
+         function noty(msg, option = 1 ) {
+            $nackbar.show({
+                text:msg.toUpperCase(),
+                actionText: 'CERRAR',
+                actionTextColor: '#fff',
+                backGroundColor: option == 1 ? '#3b3f5c' : '#e7515a',
+                pos : 'top-right'
+            })
+         }
+      </script>
     @livewireScripts
 </body>
 <!-- END: Body-->

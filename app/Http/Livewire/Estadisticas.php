@@ -8,6 +8,6 @@ class Estadisticas extends Component
 {
     public function render()
     {
-        return view('livewire.estadisticas')->extends('layouts.theme');
+        return view('livewire.dashboard.estadisticas')->extends('layouts.theme');
     }
 }

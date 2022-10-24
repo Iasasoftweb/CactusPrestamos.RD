@@ -1291,7 +1291,7 @@ body.vertical-layout.menu-open .main-menu .navigation .navigation-header .nav-me
   margin-bottom: 0.75rem; }
 
 .card {
-  margin-bottom: 1.875rem;
+  /* margin-bottom: 1.875rem; */
   border: none;
   box-shadow: 0 2px 18px 1px rgba(49, 53, 72, 0.1);
   border-radius: .45rem; }
