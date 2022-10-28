@@ -18,8 +18,10 @@
                                 <h6>{{$DetalleComponent}}</h6>
                             </div>
                         </div>
-                        <a href="javascript:void(0)" class="btn btn-info bg-dark" data-toggle="modal"
-                            data-target="#theModal"> Agregar </a>
+
+                        <button class="btn btn-info bg-dark" onclick="fireModal(1)">Agregar</button>
+                        {{-- <a href="javascript:void(0)" class="btn btn-info bg-dark" data-toggle="modal"
+                            data-target="#theModal" > Agregar </a> --}}
                     </div>
 
                     search

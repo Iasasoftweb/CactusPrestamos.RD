@@ -1,3 +1,4 @@
+<x-modal-header title="{{$ComponentName}} " action="{{$accion}}" size="modal-lg" />
 
     <div class="col-lg-12 layout-spacing">
         <div class="card">
@@ -20,3 +21,4 @@
     </div>
     
     
+    <x-modal-footer enable="{{ $btnSaveEdit }}" />
