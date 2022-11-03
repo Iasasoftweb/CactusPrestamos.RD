@@ -34,6 +34,43 @@
                             </div>
                         </div>
 
+                        <div class="form-group row">
+                            <label for="nombre" class="col-md-3 label-control">Sexo </label>
+                            <div class="col-md-9 pl-2">
+                                <select type="text" wire:model='sexo' class="form-control"
+                                    placeholder="Sexo" for="inputSexo">
+                                        <option selected>Masculino</option>
+                                        <option>Feminino</option>
+                                      </select>
+
+                                @error('sexo')
+                                    <span class="text-warning">{{ message }}</span>
+                                @enderror
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="nombre" class="col-md-3 label-control">Apellidos </label>
+                            <div class="col-md-9 pl-2">
+                                <input type="text" wire:model='apellidos' class="form-control"
+                                    placeholder="Apellidos">
+                                @error('nombres')
+                                    <span class="text-warning">{{ message }}</span>
+                                @enderror
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="nombre" class="col-md-3 label-control">Apellidos </label>
+                            <div class="col-md-9 pl-2">
+                                <input type="text" wire:model='apellidos' class="form-control"
+                                    placeholder="Apellidos">
+                                @error('nombres')
+                                    <span class="text-warning">{{ message }}</span>
+                                @enderror
+                            </div>
+                        </div>
+
                     </div>
                 </form>
             </div>
