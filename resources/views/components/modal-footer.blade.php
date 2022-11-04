@@ -1,6 +1,6 @@
 </div>
 <div class="modal-footer">
-    <button class="btn" onclick="fireModal(0)"><i class="flaticon-cancel-12"></i> CANCELAR</button>
+    <button class="btn" onclick="fireModal(0)" data-dismiss="modal"><i class="flaticon-cancel-12"></i> CANCELAR</button>
     @if($enable)
     <button type="button" wire:loading.attr="disabled" wire:click.prevent="Store" class="btn btn-primary">
 

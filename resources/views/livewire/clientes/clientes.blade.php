@@ -18,8 +18,9 @@
                                 <h6>{{$DetalleComponent}}</h6>
                             </div>
                         </div>
+                       
 
-                        <button class="btn btn-info bg-dark" onclick="fireModal(1)">Agregar</button>
+                        <button class="btn btn-info bg-dark" onclick="fireModal(1)" data-toggle="modal" data-target="#modalCustomers">Agregar</button>
                         {{-- <a href="javascript:void(0)" class="btn btn-info bg-dark" data-toggle="modal"
                             data-target="#theModal" > Agregar </a> --}}
                     </div>
@@ -103,6 +104,7 @@
     </div>
 
 
+   
 @include('livewire.clientes.form')
 @include('livewire.clientes.scripts')
 
