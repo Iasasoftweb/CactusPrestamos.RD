@@ -6,48 +6,44 @@
             <div class="card-body">
 
                 <div class="tabpanel">
-                <ul class="nav nav-tabs nav-top-border no-hover-bg" role="tablist">
+                    <ul class="nav nav-tabs nav-top-border no-hover-bg" role="tablist">
 
-                    <li class="nav-item" role="presentation">
-                        <a href="#dpersonal" class="nav-link active"  
-                            type="button" role="tab" aria-controls="dpersonal" aria-selected="true">Datos
-                            Personales</a>
-                    </li>
+                        <li class="nav-item" role="presentation">
+                            <a href="#dpersonal" class="nav-link active" type="button" role="tab"
+                                aria-controls="dpersonal" aria-selected="true" data-toggle ="tab">Datos
+                                Personales</a>
+                        </li>
 
-                    <li class="nav-item active" role="presentation">
-                        <a href="#dadjuntos" class="nav-link" 
-                            type="button" role="tab" aria-controls="dadjuntos" aria-selected="false">Datos
-                            Adjuntos</a>
-                    </li>
+                        <li class="nav-item" role="presentation">
+                            <a href="#dadjuntos" class="nav-link " type="button" role="tab" aria-controls="dadjuntos"
+                                aria-selected="false" data-toggle ="tab">Datos
+                                Adjuntos</a>
+                        </li>
 
-                </ul>
+                    </ul>
 
-                <div class="tab-content">
-                    <div class="tab-pane active" id="dpersonal" role="tabpanel" aria-labelledby="dpersonal">
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="dpersonal" role="tabpanel" aria-labelledby="dpersonal">
 
-                         <P>pRIMERO</P>
+                            <P>pRIMERO</P>
 
-                    </div>
+                        </div>
 
-                    
+
                         <div class="tab-pane" id="dadjuntos" role="tabpanel" aria-labelledby="dadjuntos">
                             <p>Probando</p>
                         </div>
                     </div>
-                  </div>
+                </div>
                 <form class="form">
-                   
-                    </div>
 
-
-
-
-
-                </form>
             </div>
 
-            <x-modal-footer enable="{{ $btnSaveEdit }}" />
-
+            </form>
         </div>
+
+        <x-modal-footer enable="{{ $btnSaveEdit }}" />
+
     </div>
+</div>
 </div>
