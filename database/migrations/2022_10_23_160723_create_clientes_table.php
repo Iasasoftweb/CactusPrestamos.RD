@@ -26,8 +26,13 @@ class CreateClientesTable extends Migration
                         $table->string('phone2', 15)->nullable();
                         $table->date('fecha_nac')->unullable();
                         $table->string('email', 255)->nullable();
-                        $table->string('avata', 100)->nullable();
+                        $table->unsignedBigInteger('idavata')->nullable();
+                        $table->foreign('idavata')->references('id')->on('avata_clientes');
                         $table->string('fotocedula', 100)->nullable();
+                        $table->unsignedBigInteger('idciudad')->nullable();
+                        $table->foreign('idciudad')->references('id')->on('ciudads');
+                        $table->unsignedBigInteger('idrutas')->nullable();
+                        $table->foreign('idrutas')->references('id')->on('rutas');
                         $table->enum('estado', ['ACTIVO','INACTIVO'])->default('ACTIVO');
                         $table->unsignedBigInteger('idnacionalidad')->nullable();
                         $table->timestamps();

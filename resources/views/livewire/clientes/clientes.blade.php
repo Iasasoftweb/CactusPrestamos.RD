@@ -14,13 +14,13 @@
                                 <i class="icon-user font-large-2 mr-2"></i>
                             </div>
                             <div>
-                                <h3 class="info">{{$ComponentName}} | {{$accion}}</h3>
+                                <h3 class="info">{{$ComponentName}} | Listado</h3>
                                 <h6>{{$DetalleComponent}}</h6>
                             </div>
                         </div>
                        
 
-                        <button class="btn btn-info bg-dark" onclick="fireModal(1)" data-toggle="modal" data-target="#modalCustomers">Agregar</button>
+                        <button class="btn btn-primary white" onclick="fireModal(1)" data-toggle="modal" data-target="#modalCustomers">Agregar</button>
                         {{-- <a href="javascript:void(0)" class="btn btn-info bg-dark" data-toggle="modal"
                             data-target="#theModal" > Agregar </a> --}}
                     </div>

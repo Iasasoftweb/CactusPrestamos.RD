@@ -3,6 +3,7 @@
 namespace App\Http\Livewire\Clientes;
 
 use Livewire\Component;
+use App\Models\Nacionalidad;
 
 
 class Clientes extends Component
@@ -14,11 +15,13 @@ class Clientes extends Component
     public $DetalleComponent = 'Mantenimiento de Clientes';
     public $accion = 'Listado';
 
-    public $nombres, $apellidos, $apodo, $sexo, $nidentidad, $direccion, $phone1, $phone2, $fecha_nac, $email, $avata, $fotocedula, $estado, $idnacionalidad, $btnSaveEdit = true;
+    public $nombres, $apellidos, $apodo, $idciudad, $idrutas, $sexo, $nidentidad, $direccion, $phone1, $phone2, $fecha_nac, $email, $idavata, $fotocedula, $estado, $idnacionalidad, $btnSaveEdit = true;
      
     public function render()
     {   
       
-        return view('livewire.clientes.clientes')->extends('layouts.theme');
+        return view('livewire.clientes.clientes', [
+          'nacionalities' => Nacionalidad::orderBy('nacionalidad', 'asc')->get()  
+        ])->extends('layouts.theme');
     }
 }
