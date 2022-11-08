@@ -24,4 +24,15 @@ class Clientes extends Component
           'nacionalities' => Nacionalidad::orderBy('nacionalidad', 'asc')->get()  
         ])->extends('layouts.theme');
     }
+
+
+    public function Store()
+    {
+      
+    }
+
+    public function resetUI()
+    {
+      
+    }
 }

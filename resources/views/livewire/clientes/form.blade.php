@@ -36,9 +36,11 @@
                                         <div class="form-group col-md-3 pl-2">
                                             <label for="nidentidad" class="label-control">No. Identidad </label>
                                             <input type="text" for="nidentidad" wire:model='nidentidad'
-                                                class="form-control" placeholder="No. Identidad">
+                                                class="form-control {{ $errors->first('nidentidad') ? "text-danger" : "" }}" placeholder="No. Identidad">
                                             @error('nidentidad')
-                                            <span class="text-warning">{{ message }}</span>
+                                              <x-alert msg="{{ $message }}" />
+                                            {{-- <span class="text-warning">{{ message }}</span> --}}
+
                                             @enderror
                                         </div>
 
