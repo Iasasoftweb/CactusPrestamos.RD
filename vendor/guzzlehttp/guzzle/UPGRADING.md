@@ -16,7 +16,7 @@ Please make sure:
 
 - Class `GuzzleHttp\UriTemplate` is removed.
 - Class `GuzzleHttp\Exception\SeekException` is removed.
-- Classes `GuzzleHttp\Exception\BadResponseException`, `GuzzleHttp\Exception\ClientException`, 
+- Classes `GuzzleHttp\Exception\BadResponseException`, `GuzzleHttp\Exception\Clientesxception`, 
   `GuzzleHttp\Exception\ServerException` can no longer be initialized with an empty
   Response as argument.
 - Class `GuzzleHttp\Exception\ConnectException` now extends `GuzzleHttp\Exception\TransferException`

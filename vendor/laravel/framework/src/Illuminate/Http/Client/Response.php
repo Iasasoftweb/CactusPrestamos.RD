@@ -211,7 +211,7 @@ class Response implements ArrayAccess
      */
     public function failed()
     {
-        return $this->serverError() || $this->clientError();
+        return $this->serverError() || $this->Clientesrror();
     }
 
     /**
@@ -219,7 +219,7 @@ class Response implements ArrayAccess
      *
      * @return bool
      */
-    public function clientError()
+    public function Clientesrror()
     {
         return $this->status() >= 400 && $this->status() < 500;
     }

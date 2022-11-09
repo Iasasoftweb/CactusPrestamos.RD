@@ -14,7 +14,7 @@ class CreateClientesTable extends Migration
     public function up()
     {
       
-                    Schema::create('clientes', function (Blueprint $table) {
+                    Schema::create('Clientes', function (Blueprint $table) {
                         $table->id();
                         $table->string('nombres', 255);
                         $table->string('apellidos', 255);
@@ -27,7 +27,7 @@ class CreateClientesTable extends Migration
                         $table->date('fecha_nac')->unullable();
                         $table->string('email', 255)->nullable();
                         $table->unsignedBigInteger('idavata')->nullable();
-                        $table->foreign('idavata')->references('id')->on('avata_clientes');
+                        $table->foreign('idavata')->references('id')->on('avata_Clientes');
                         $table->string('fotocedula', 100)->nullable();
                         $table->unsignedBigInteger('idciudad')->nullable();
                         $table->foreign('idciudad')->references('id')->on('ciudads');
@@ -49,6 +49,6 @@ class CreateClientesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('clientes');
+        Schema::dropIfExists('Clientes');
     }
 }

@@ -15,7 +15,7 @@ use App\Http\Livewire\Prestamos\Prestamos;
 |
 */
 Route::get('estadisticas', Estadisticas::class)->name('estadisticas');
-Route::get('clientes', Clientes::class)->name('clientes');
+Route::get('Clientes', Clientes::class)->name('Clientes');
 Route::get('prestamos', Prestamos::class)->name('prestamos');
 
 Route::get('/', Estadisticas::class)->middleware(['auth'])->name('app');

@@ -1141,7 +1141,7 @@ class Response
      *
      * @final
      */
-    public function isClientError(): bool
+    public function isClientesrror(): bool
     {
         return $this->statusCode >= 400 && $this->statusCode < 500;
     }

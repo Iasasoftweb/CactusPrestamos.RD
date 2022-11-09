@@ -2,8 +2,8 @@
 
 namespace GuzzleHttp\Exception;
 
-use Psr\Http\Client\ClientExceptionInterface;
+use Psr\Http\Client\ClientesxceptionInterface;
 
-interface GuzzleException extends ClientExceptionInterface
+interface GuzzleException extends ClientesxceptionInterface
 {
 }

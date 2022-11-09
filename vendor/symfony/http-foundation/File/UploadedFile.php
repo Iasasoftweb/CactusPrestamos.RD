@@ -123,7 +123,7 @@ class UploadedFile extends File
      * @see guessExtension()
      * @see getClientMimeType()
      */
-    public function guessClientExtension(): ?string
+    public function guessClientesxtension(): ?string
     {
         if (!class_exists(MimeTypes::class)) {
             throw new \LogicException('You cannot guess the extension as the Mime component is not installed. Try running "composer require symfony/mime".');

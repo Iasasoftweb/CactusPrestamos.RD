@@ -30,7 +30,7 @@ class Cliente extends Model
 
       public static function rules($id) {
 
-       return ['nidentidad' => "requered|min:13|max:20|unique:clientes, nidentidad,{$id}"];
+       return ['nidentidad' => "requered|min:13|max:20|unique:Clientes, nidentidad,{$id}"];
 
          
       } 
@@ -46,20 +46,21 @@ class Cliente extends Model
 
       public function avata()
       {
-         return $this->morphOne(avata_clientes::class, 'id')->withDefault();
+         return $this->morphOne(avata_Clientes::class, 'id')->withDefault();
       }
 
+     
       public function getImgAtribute()
       {
          return $img = $this->avata->avata;
             if($img !=null) {
-                if(file_exists('sotorage/clientes' .  $img))
-                return 'storage/clientes' . $img;
+                if(file_exists('sotorage/Clientes' .  $img))
+                return 'storage/Clientes' . $img;
                 else
-                return 'storage/clientes/avatanofound.png';
+                return 'storage/Clientes/avatanofound.png';
             } 
                
-            return 'storage/clientes/noimg.png';
+            return 'storage/Clientes/noimg.png';
 
       }
     

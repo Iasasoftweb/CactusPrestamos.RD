@@ -14,27 +14,29 @@
                                 <i class="icon-user font-large-2 mr-2"></i>
                             </div>
                             <div>
-                                <h3 class="info">{{$ComponentName}} | Listado</h3>
-                                <h6>{{$DetalleComponent}}</h6>
+                                <h3 class="info">{{ $ComponentName }} | Listado</h3>
+                                <h6>{{ $DetalleComponent }}</h6>
                             </div>
                         </div>
-                       
 
-                        <button class="btn btn-primary white" onclick="fireModal(1)" data-toggle="modal" data-target="#modalCustomers">Agregar</button>
+
+                        <button class="btn btn-primary white" onclick="fireModal(1)"
+                            wire:click.enter="$set('accion', 'Agregar')" data-toggle="modal"
+                            data-target="#modalCustomers">Agregar Nuevo Cliente</button>
                         {{-- <a href="javascript:void(0)" class="btn btn-info bg-dark" data-toggle="modal"
-                            data-target="#theModal" > Agregar </a> --}}
+                            data-target="#theModal"> Agregar </a> --}}
                     </div>
 
-                    search
+                  
 
                 </div>
             </div>
 
 
             <div class="card-content m-1">
-                <div class="table-responsive text-nowrap ">
-                    <table class="table table-hover table-bordered table-striped ">
-                        <thead class="text-white" style="background-color: #3b3f5c">
+                <div class="table-responsive ">
+                    <table class="table ">
+                        <thead class="bg-dark white">
                             <tr>
                                 <th>Id</th>
                                 <th>No. Identidad</th>
@@ -47,30 +49,40 @@
 
                             </tr>
                         </thead>
+                        @foreach ($vclientes as $item)
+                            <tbody>
+                                <tr>
+                                    <td>{{ $item->id }}</td>
+                                    <td>{{ $item->nidentidad }}</td>
+                                    <td>{{ $item->nombres }}</td>
+                                    <td>{{ $item->apellidos }}</td>
+                                    <td>{{ $item->phone1 }}</td>
+                                    <td>{{ $item->phone2 }}</td>
+                                    <td>
 
-                        <tbody>
-                            <tr>
-                                <td>1</td>
-                                <td>01000225662</td>
-                                <td>Ismael</td>
-                                <td>Santos</td>
-                                <td>829-291-8866</td>
-                                <td>829-291-8866</td>
-                                <td>
-                                    <a href="javascript:void(0)" class="btn btn-dark mtmobile" title="Edit">
-                                        Editar  
-                                    </a>
-                                    <a href="javascript:void(0)" class="btn btn-danger" title="Delete">
-                                        Borrar
-                                    </a>
-                                </td>
+                                        <a href="javascript:void(0)" class="btn btn-success mtmobile" title="Edit"
+                                            onclick="fireModal(1)" wire:click.enter="$set('accion', 'Editar')"
+                                            data-toggle="modal" data-target="#modalCustomers">
+                                            Editar
+                                        </a>
+                                        <a href="javascript:void(0)" class="btn btn-danger" title="Delete">
+                                            Borrar
+                                        </a>
+                                    </td>
 
-                            </tr>
-                           
-                        </tbody>
+                                </tr>
+
+                            </tbody>
+                        @endforeach
+
+
+
 
                     </table>
-                    Pagination
+                      <div class="d-flex justify-content-center ">
+                       {{ $vclientes->links() }}
+                    </div>  
+                  
                 </div>
             </div>
 
@@ -104,9 +116,9 @@
     </div>
 
 
-   
-@include('livewire.clientes.form')
-@include('livewire.clientes.scripts')
+
+    @include('livewire.Clientes.form')
+    @include('livewire.Clientes.scripts')
 
 
 </div>

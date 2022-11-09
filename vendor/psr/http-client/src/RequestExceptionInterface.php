@@ -11,7 +11,7 @@ use Psr\Http\Message\RequestInterface;
  *      - Request is invalid (e.g. method is missing)
  *      - Runtime request errors (e.g. the body stream is not seekable)
  */
-interface RequestExceptionInterface extends ClientExceptionInterface
+interface RequestExceptionInterface extends ClientesxceptionInterface
 {
     /**
      * Returns the request.

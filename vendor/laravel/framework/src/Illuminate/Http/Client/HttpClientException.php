@@ -4,7 +4,7 @@ namespace Illuminate\Http\Client;
 
 use Exception;
 
-class HttpClientException extends Exception
+class HttpClientesxception extends Exception
 {
     //
 }

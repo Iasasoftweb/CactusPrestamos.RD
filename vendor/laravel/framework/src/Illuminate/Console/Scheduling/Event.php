@@ -15,7 +15,7 @@ use Illuminate\Support\Reflector;
 use Illuminate\Support\Stringable;
 use Illuminate\Support\Traits\Macroable;
 use Illuminate\Support\Traits\ReflectsClosures;
-use Psr\Http\Client\ClientExceptionInterface;
+use Psr\Http\Client\ClientesxceptionInterface;
 use Symfony\Component\Process\Process;
 use Throwable;
 
@@ -593,7 +593,7 @@ class Event
         return function (Container $container, HttpClient $http) use ($url) {
             try {
                 $http->request('GET', $url);
-            } catch (ClientExceptionInterface|TransferException $e) {
+            } catch (ClientesxceptionInterface|TransferException $e) {
                 $container->make(ExceptionHandler::class)->report($e);
             }
         };

@@ -36,11 +36,11 @@
                                         <div class="form-group col-md-3 pl-2">
                                             <label for="nidentidad" class="label-control">No. Identidad </label>
                                             <input type="text" for="nidentidad" wire:model='nidentidad'
-                                                class="form-control {{ $errors->first('nidentidad') ? "text-danger" : "" }}" placeholder="No. Identidad">
+                                                class="form-control {{ $errors->first('nidentidad') ? ' text-danger' : '' }}"
+                                                placeholder="No. Identidad">
                                             @error('nidentidad')
-                                              <x-alert msg="{{ $message }}" />
+                                            <x-alert msg="{{ $message }}" />
                                             {{-- <span class="text-warning">{{ message }}</span> --}}
-
                                             @enderror
                                         </div>
 
@@ -100,34 +100,36 @@
                                                 @error('fecha_nac')
                                                 <span class="text-warning">{{ message }}</span>
                                                 @enderror
-                                               <div class="form-control-position">
-                                                 <i class="ft-message-square"></i> 
-                                               </div>         
+                                                <div class="form-control-position">
+                                                    <i class="ft-message-square"></i>
+                                                </div>
                                             </div>
                                         </div>
 
                                         <div class="form-group col-md-3 pl-2">
                                             <label for="idenacionalidad" class=" label-control">Nacionalidad </label>
-                                            <select wire:model='idnacionalidad' class="form-control" placeholder="Nacionalidad">
+                                            <select wire:model='idnacionalidad' class="form-control"
+                                                placeholder="Nacionalidad">
                                                 <option value="Seleccionar" disabled>Seleccionar</option>
                                                 @foreach ($nacionalities as $item)
-                                                   <option value="{{$item->id}}">{{$item->nacionalidad}}</option>
+                                                <option value="{{ $item->id }}">{{ $item->nacionalidad }}
+                                                </option>
                                                 @endforeach
-                                            </select>   
+                                            </select>
                                             @error('idenacionalidad')
                                             <span class="text-warning">{{ message }}</span>
                                             @enderror
                                         </div>
 
 
-                                      
-                                    </div>
 
+                                    </div>
+                                    <h4 class="form-section">
+                                        <i class="ft-map"> </i>
+                                        Ubicaci­ón
+                                    </h4>
                                     <div class="row">
-                                        <h4 class="form-section col-md-12">
-                                            <i class="ft-user"> </i>
-                                            Ubicaci­ón
-                                        </h4>
+
                                     </div>
                                     <div class="row">
                                         <div class="form-group col-md-12 pl-2">
@@ -141,72 +143,140 @@
                                         </div>
 
                                     </div>
+                                    <div class="row">
 
-                                    <DIV class="row">
-                                        <div class="form-group col-md-3 pl-2">
-                                            <label for="phone1" class=" label-control">Teléfono # 1 </label>
+                                        <div class="form-group col-md-4 pl-2">
+                                            <label for="cliudad" class=" label-control">Ciudad</label>
                                             <div class="position-relative has-icon-left">
-                                                <input type="text" wire:model='phone1' class="form-control"
-                                                    placeholder="Teléfono # 1">
-                                                @error('phone1')
-                                                <span class="text-warning">{{ message }}</span>
-                                                @enderror
-                                               <div class="form-control-position">
-                                                 <i class="ft-phone-call"></i> 
-                                               </div>         
+                                                <select type="text" wire:model='idciudad' class="form-control"
+                                                    placeholder="Ciudad">
+                                                    <option value="Seleccionar" disabled>Seleccionar</option>
+                                            </div>
+                                            @foreach ($vciudad as $item)
+                                            <option value="{{ $item->id }}">{{ $item->ciudad }}
+                                            </option>
+                                            @endforeach
+                                            </select>
+                                            @error('ciudad')
+                                            <span class="text-warning">{{ message }}</span>
+                                            @enderror
+                                            <div class="form-control-position">
+                                                <i class="ft-map"></i>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group col-md-4 pl-2">
+                                        <label for="rutas" class=" label-control">Ruta</label>
+                                        <div class="position-relative has-icon-left">
+                                            <select type="text" wire:model='idruta' class="form-control"
+                                                arial-placeholder="Ruta">
+                                                <option value="Seleccionar" disabled>Seleccionar</option>
+                                                @foreach ($vrutas as $item)
+                                                <option value="{{ $item->id }}"> {{ $item->rutas }}</option>
+                                                @endforeach
+
+                                            </select>
+                                            @error('ruta')
+                                            <span class="text-warning">{{ message }}</span>
+                                            @enderror
+                                            <div class="form-control-position">
+                                                <i class="ft-map-pin"></i>
                                             </div>
                                         </div>
-                                        
-                                        <div class="form-group col-md-3 pl-2">
-                                            <label for="phone2" class=" label-control">Teléfono # 2 </label>
-                                            <div class="position-relative has-icon-left">
-                                                <input type="text" wire:model='phone2' class="form-control"
-                                                    placeholder="Teléfono # 2">
-                                                @error('phone2')
-                                                <span class="text-warning">{{ message }}</span>
-                                                @enderror
-                                               <div class="form-control-position">
-                                                 <i class="ft-phone-call"></i> 
-                                               </div>         
+                                    </div>
+
+
+                                    <div class="form-group col-md-4 pl-2">
+                                        <label for="estado" class=" label-control">Estado</label>
+                                        <div class="position-relative has-icon-left">
+                                            <select type="text" aria-placeholder="Estado" wire:model='estado'
+                                                class="form-control">
+                                                <option value="ACTIVO" @disabled($accion=='Agregar' )> ACTIVO </option>
+                                                <option value="INACTIVO" @disabled($accion=='Agregar' )> INACTIVO
+                                                </option>
+                                            </select>
+                                            @error('estado')
+                                            <span class="text-warning">{{ message }}</span>
+                                            @enderror
+                                            <div class="form-control-position">
+                                                <i class="ft-check-square"></i>
                                             </div>
                                         </div>
-
-                                        <div class="form-group col-md-5 pl-2">
-                                            <label for="email" class=" label-control">Email </label>
-                                            <div class="position-relative has-icon-left">
-                                                <input type="text" wire:model='email' class="form-control"
-                                                    placeholder="Fecha Nacimiento">
-                                                @error('email')
-                                                <span class="text-warning">{{ message }}</span>
-                                                @enderror
-                                               <div class="form-control-position">
-                                                 <i class="ft-at-sign"></i> 
-                                               </div>         
-                                            </div>
-                                        </div>
+                                    </div>
 
 
-                                    </DIV>
+
+
+
 
                                 </div>
+                                <DIV class="row">
+                                    <div class="form-group col-md-3 pl-2">
+                                        <label for="phone1" class=" label-control">Teléfono # 1 </label>
+                                        <div class="position-relative has-icon-left">
+                                            <input type="text" wire:model='phone1' class="form-control"
+                                                placeholder="Teléfono # 1">
+                                            @error('phone1')
+                                            <span class="text-warning">{{ message }}</span>
+                                            @enderror
+                                            <div class="form-control-position">
+                                                <i class="ft-phone-call"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group col-md-3 pl-2">
+                                        <label for="phone2" class=" label-control">Teléfono # 2 </label>
+                                        <div class="position-relative has-icon-left">
+                                            <input type="text" wire:model='phone2' class="form-control"
+                                                placeholder="Teléfono # 2">
+                                            @error('phone2')
+                                            <span class="text-warning">{{ message }}</span>
+                                            @enderror
+                                            <div class="form-control-position">
+                                                <i class="ft-phone-call"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group col-md-6 pl-2">
+                                        <label for="email" class=" label-control">Email </label>
+                                        <div class="position-relative has-icon-left">
+                                            <input type="text" wire:model='email' class="form-control"
+                                                placeholder="Fecha Nacimiento">
+                                            @error('email')
+                                            <span class="text-warning">{{ message }}</span>
+                                            @enderror
+                                            <div class="form-control-position">
+                                                <i class="ft-at-sign"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                </DIV>
 
                             </div>
 
+                        </div>
 
-                            <div class="tab-pane" id="dadjuntos" role="tabpanel" aria-labelledby="dadjuntos">
-                                <p>Probando</p>
-                            </div>
+
+                        <div class="tab-pane" id="dadjuntos" role="tabpanel" aria-labelledby="dadjuntos">
+                            <p>Probando</p>
                         </div>
                     </div>
-
-
                 </div>
 
-            </form>
+
         </div>
 
-        <x-modal-footer enable="{{ $btnSaveEdit }}" />
-
+        </form>
     </div>
+
+    <x-modal-footer enable="{{ $btnSaveEdit }}" />
+
+</div>
 </div>
 </div>
