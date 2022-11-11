@@ -7,6 +7,9 @@
         } else {
             document.querySelector('.modal').classList.add('hide')
             document.querySelector('.modal').style.display = 'none'
+            
         }
     }
+
+    function closex
 </script>

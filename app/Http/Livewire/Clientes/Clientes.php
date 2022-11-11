@@ -20,17 +20,27 @@ class Clientes extends Component
    
 
     public $nombres, $apellidos, $apodo, $idciudad, $idrutas, $sexo, $nidentidad, $direccion, $phone1, $phone2, $fecha_nac, $email, $idavata, $fotocedula, $estado, $idnacionalidad, $btnSaveEdit = true;
-    public $search; 
+    public $search;
    
-   
+   public function Reseting()
+   {
+             
+        $this->search ='';
+
+      // $cieentes = Cliente::orderBy('id', 'asc')->paginate(8); 
+      //    dd($clientes);
+   }
+
+
     public function loadClientes()
     {
       if(strlen($this->search)) {
-        $clientes = Cliente::where('nombres', 'like', "%{$this->search}%")
+         $clientes = Cliente::where('nombres', 'like', "%{$this->search}%")
         ->orWhere('apellidos', 'like', "%{$this->search}%")
         ->paginate(8);
       } else {
-        $clientes = Cliente::orderBy('id', 'asc')->paginate(8);   
+        $clientes = Cliente::orderBy('id', 'asc')->paginate(8); 
+         
       }
      
       
@@ -46,7 +56,7 @@ class Clientes extends Component
       $vrutas        = Rutas::orderBy('rutas', 'asc')->get();    
       $vciudad       = Ciudad::orderBy('ciudad', 'asc')->get();
       $vclientes     = $this->loadClientes();
-
+      
       
         return view('livewire.Clientes.Clientes', [ 
 
