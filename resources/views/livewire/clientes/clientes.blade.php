@@ -79,12 +79,13 @@
 
 
 
-
+                        
                     </table>
+                       <h4 style="font-weight: 600">Total de Clientes : <i style="font-weight:300 ">{{ $vclientes->count() }}</i></h4>  
                       <div class="d-flex justify-content-center ">
                        {{ $vclientes->links() }}
                     </div>  
-                  
+                    
                 </div>
             </div>
 
