@@ -1,4 +1,4 @@
-<x-modal-header title="{{ $ComponentName }} " action="{{ $accion }}" size="modal-lg" />
+<x-modal-header title="{{ $ComponentName }} " accion="{{ $action }}" size="modal-lg" />
 
 <div class="col-lg-12 ">
     <div class="card">
@@ -193,8 +193,8 @@
                                         <div class="position-relative has-icon-left">
                                             <select type="text" aria-placeholder="Estado" wire:model='estado'
                                                 class="form-control">
-                                                <option value="ACTIVO" @disabled($accion=='Agregar' )> ACTIVO </option>
-                                                <option value="INACTIVO" @disabled($accion=='Agregar' )> INACTIVO
+                                                <option value="ACTIVO" @disabled($action=='Agregar' )> ACTIVO </option>
+                                                <option value="INACTIVO" @disabled($action=='Agregar' )> INACTIVO
                                                 </option>
                                             </select>
                                             @error('estado')

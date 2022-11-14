@@ -294,6 +294,7 @@
     <script src="{{ asset('/app-assets/js/core/app-menu.js')}}"></script>
     <script src="{{ asset('/app-assets/js/core/app.js')}}"></script>
     <script src="{{ asset('/app-assets/js/scripts/modal/components-modal.js')}}"></script>
+    <script src="{{ asset('/app-assets/css/feather.css') }}" rel="stylesheet" type="text/css"></script>
     <!-- END: Theme JS-->
     <script>
      $(document).ready(function() {

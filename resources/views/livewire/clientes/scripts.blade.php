@@ -1,5 +1,7 @@
 <script>
+    
     function fireModal(acction = 1 ) {
+        @this.action='Nuevo Cliente'
         if(acction == 1){
             document.querySelector('.modal').classList.add('show')
             document.querySelector('.modal').classList.add('fade')
@@ -11,5 +13,7 @@
         }
     }
 
-    function closex
+    windows.addEventListener('modal-open', event => {
+      fireModal(1)
+    })
 </script>

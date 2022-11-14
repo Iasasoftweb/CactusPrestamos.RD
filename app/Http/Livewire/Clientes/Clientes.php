@@ -16,11 +16,11 @@ class Clientes extends Component
     public $ComponentName = 'Clientes';
     public $PageTitle = 'Editar';
     public $DetalleComponent = 'Mantenimiento de Clientes';
-    public $accion = 'Listado';
+    public $action = 'Listado';
    
 
     public $nombres, $apellidos, $apodo, $idciudad, $idrutas, $sexo, $nidentidad, $direccion, $phone1, $phone2, $fecha_nac, $email, $idavata, $fotocedula, $estado, $idnacionalidad, $btnSaveEdit = true;
-    public $search;
+    public $search, $selected_id = 0;
    
    public function Reseting()
    {
@@ -52,6 +52,8 @@ class Clientes extends Component
     }
     public function render()
     {   
+
+    
       $nacionalities = Nacionalidad::orderBy('nacionalidad', 'asc')->get();
       $vrutas        = Rutas::orderBy('rutas', 'asc')->get();    
       $vciudad       = Ciudad::orderBy('ciudad', 'asc')->get();
@@ -68,6 +70,29 @@ class Clientes extends Component
     }
 
 
+    public function Edit(Cliente $cliente)
+    {
+      $this->selected_id = $cliente->id;
+      $this->nombres = $cliente->nombres;
+      $this->apellidos = $cliente->apellidos;
+      $this->sexo = $cliente->sexo;
+      $this->nidentidad =$cliente->nidentidad;
+      $this->apodo =$cliente->apodo;
+      $this->direccion = $cliente->direccion;
+      $this->phone1 = $cliente->phone1;
+      $this->phone2 = $cliente->phone2;
+      $this->fecha_nac = $cliente->fecha_nac;
+      $this->email = $cliente->email;
+      $this->idavata = $cliente->idavata;
+      $this->idciudad = $cliente->idciudad;
+      $this->idrutas = $cliente->idrutas;
+      $this->fotocedula = $cliente->fotocedula;
+      $this->estado = $cliente->estado;
+      $this->idnacionalidad = $cliente->idnacionalidad;
+      $this->action ='Editar';
+      $this->dispatchBrowserEvent('modal-open');
+    }
+
     public function Store()
     {
       
@@ -77,6 +102,8 @@ class Clientes extends Component
     {
       
     }
+
+    
 
     protected $listeners = ['searching'];
 

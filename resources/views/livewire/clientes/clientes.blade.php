@@ -15,7 +15,7 @@
                                 <i class="ft-users font-large-2 mr-2"></i>
                             </div>
                             <div>
-                                <h3 class="info">{{ $ComponentName }} | Listado</h3>
+                                <h3 class="info">{{ $ComponentName }} |Listado</h3>
                                 <h6>{{ $DetalleComponent }}</h6>
                             </div>
                         </div>
@@ -23,9 +23,7 @@
 
                       
     
-                        <button class="btn btn-primary white mr-2" onclick="fireModal(1)"
-                            wire:click.enter="$set('accion', 'Agregar')" data-toggle="modal"
-                            data-target="#modalCustomers">Agregar Nuevo Cliente</button>
+                        <button class="btn btn-primary white mr-2" onclick="fireModal(1)" type="button"><i class="ft-plus"> </i>Agregar Nuevo Cliente</button>
                        
                     </div>
 
@@ -62,13 +60,13 @@
                                     <td>{{ $item->phone2 }}</td>
                                     <td>
 
-                                        <a href="javascript:void(0)" class="btn btn-success mtmobile" title="Edit"
-                                            onclick="fireModal(1)" wire:click.enter="$set('accion', 'Editar')"
-                                            data-toggle="modal" data-target="#modalCustomers">
+                                        <a href="javascript:void(0)" class="btn btn-warning mtmobile" title="Edit"
+                                            onclick="fireModal(1)" wire:click="Edit({{ $item->id }})"
+                                            ><i class="ft-edit"></i>
                                             Editar
                                         </a>
                                         <a href="javascript:void(0)" class="btn btn-danger" title="Delete">
-                                            Borrar
+                                            <i class="feather-trash-2"></i> Borrar
                                         </a>
                                     </td>
 
